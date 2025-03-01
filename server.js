@@ -41,7 +41,7 @@ app.get("/guests", (req, res) => {
 // 📌 Сохранить анкету (ФИКС)
 app.post("/submit", (req, res) => {
     const { name, attending } = req.body;
-    console.log("📩 Пришел POST-запрос:", req.body);
+    console.log("Получены данные:", name, attending); // Логируем данные
 
     if (!name || !attending) {
         return res.status(400).json({ message: "Барлық өрістерді толтырыңыз." });

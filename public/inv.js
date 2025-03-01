@@ -84,24 +84,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("rsvp-form");
 
     form.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Остановка стандартной отправки формы
+        event.preventDefault(); // Остановить стандартную отправку формы
 
-        const name = document.getElementById("name").value;
-        const attending = document.querySelector('input[name="attending"]:checked')?.value;
+        const name = document.getElementById("guest-name").value;
+        const attendance = document.querySelector('input[name="attendance"]:checked')?.value;
 
-        if (!name || !attending) {
-            alert("Барлық өрістерді толтырыңыз.");
+        if (!name || !attendance) {
+            alert("Барлық өрістерді толтырыңыз!"); // Предупреждение
             return;
         }
 
-        const response = await fetch("https://your-service.onrender.com/submit", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, attending })
-        });
+        // Отправка данных на сервер
+        try {
+            const response = await fetch("/submit", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, attending: attendance }),
+            });
 
-        const result = await response.json();
-        alert(result.message);
+            const result = await response.json();
+            alert(result.message);
+        } catch (error) {
+            console.error("Ошибка отправки:", error);
+            alert("Қате орын алды, кейінірек көріңіз.");
+        }
     });
 });
 document.addEventListener("DOMContentLoaded", () => {
