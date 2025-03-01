@@ -74,3 +74,9 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
     console.log(`🚀 Сервер запущен на порту ${PORT}`);
 });
+app.use(express.static(path.join(__dirname, "public")));
+
+// Отдаём главную страницу
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "inv.html")); // Убедись, что файл `inv.html` есть!
+});
