@@ -52,6 +52,8 @@ app.post("/submit", (req, res) => {
 });
 
 // Запускаем сервер
+console.log("PORT из process.env:", process.env.PORT);
+
 app.listen(PORT, () => {
-    console.log(`✅ Сервер запущен на http://localhost:${PORT}`);
+    console.log(`Сервер запущен на порту ${PORT}`);
 });
