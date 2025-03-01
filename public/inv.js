@@ -59,26 +59,39 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("seconds").textContent = Math.floor((distance % (1000 * 60)) / 1000);
     }, 1000);
 
-    // 🎵 Фоновая музыка
-    const music = document.getElementById("background-music");
-    const musicButton = document.querySelector(".music-button");
+    // // 🎵 Фоновая музыка
+    // const music = document.getElementById("background-music");
+    // const musicButton = document.querySelector(".music-button");
 
-    music.play().then(() => {
-        music.muted = false; 
-        music.volume = 0.5; 
-    }).catch(() => {
-        console.log("Автовоспроизведение заблокировано браузером.");
-    });
+    // music.play().then(() => {
+    //     music.muted = false; 
+    //     music.volume = 0.5; 
+    // }).catch(() => {
+    //     console.log("Автовоспроизведение заблокировано браузером.");
+    // });
 
-    musicButton.addEventListener("click", () => {
-        if (music.paused) {
-            music.play();
-            musicButton.textContent = "🔊";
-        } else {
-            music.pause();
-            musicButton.textContent = "🎵";
-        }
-    });
+    // musicButton.addEventListener("click", () => {
+    //     if (music.paused) {
+    //         music.play();
+    //         musicButton.textContent = "🔊";
+    //     } else {
+    //         music.pause();
+    //         musicButton.textContent = "🎵";
+    //     }
+    // });
+
+    const audio = document.getElementById("background-music");
+const playButton = document.getElementById("play-button");
+
+function toggleMusic() {
+    if (audio.paused) {
+        audio.play();
+        playButton.textContent = "⏸️"; // Меняем иконку на паузу
+    } else {
+        audio.pause();
+        playButton.textContent = "▶️"; // Возвращаем иконку "Play"
+    }
+}
 
     // 📝 Форма RSVP
     const form = document.getElementById("rsvp-form");

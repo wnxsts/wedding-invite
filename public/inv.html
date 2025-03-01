@@ -26,8 +26,15 @@
            
             <h2 class="title">Үйлeну той</h2>
             <h3 class="names">Сайран & Жанар</h3>
-            <button class="music-button">🎵</button>
+            <div class="music-container" onclick="toggleMusic()">
+                <button id="play-button">▶️</button>
+                <div class="rotating-text">
+                    <span>Әуен - әуен - әуен - нәле - нәле - нәле - </span>
+                </div>
+            </div>
         </div>
+        </div>
+        
         <audio id="background-music" autoplay loop controls>
             <source src="msc.mp3" type="audio/mpeg">
             <source src="msc.ogg" type="audio/ogg">
