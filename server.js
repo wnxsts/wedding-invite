@@ -1,60 +1,54 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const fs = require("fs");
+const Database = require("better-sqlite3");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+// Подключаем базу SQLite (файл data.db)
+const db = new Database("data.db", { verbose: console.log });
+
+// Создаём таблицу гостей, если её нет
+db.prepare(`
+    CREATE TABLE IF NOT EXISTS guests (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        attending TEXT NOT NULL
+    )
+`).run();
+
 app.use(cors());
 app.use(express.json());
 
-// 📌 Раздаём статику (чтобы сайт открывался)
+// Раздаём статику
 app.use(express.static(path.join(__dirname, "public")));
 
-// 📌 Главная страница
+// Главная страница
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "inv.html"));
 });
 
-// 📌 Файл для хранения гостей
-const DATA_FILE = path.join(__dirname, "data.json");
-
-// 📌 Функция чтения гостей
-const readData = () => {
-    if (!fs.existsSync(DATA_FILE)) return [];
-    return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
-};
-
-// 📌 Функция записи гостей
-const writeData = (data) => {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
-};
-
-// 📌 Получить список гостей (ПРОВЕРЬТЕ В РЕНДЕРЕ)
+// 📌 Получить список гостей
 app.get("/guests", (req, res) => {
-    console.log("🔹 Получен GET-запрос на /guests");
-    const guests = readData();
+    const guests = db.prepare("SELECT * FROM guests").all();
     res.json(guests);
 });
 
-// 📌 Сохранить анкету (ФИКС)
+// 📌 Сохранить анкету
 app.post("/submit", (req, res) => {
     const { name, attending } = req.body;
-    console.log("Получены данные:", name, attending); // Логируем данные
-
     if (!name || !attending) {
         return res.status(400).json({ message: "Барлық өрістерді толтырыңыз." });
     }
 
-    const guests = readData();
-    guests.push({ name, attending });
-    writeData(guests);
+    // Сохраняем в базу данных
+    db.prepare("INSERT INTO guests (name, attending) VALUES (?, ?)").run(name, attending);
 
     res.json({ message: "Қатысу сәтті расталды!" });
 });
 
-// 📌 Запускаем сервер
+// Запускаем сервер
 app.listen(PORT, () => {
     console.log(`✅ Сервер запущен на порту ${PORT}`);
 });
