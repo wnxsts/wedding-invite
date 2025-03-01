@@ -9,26 +9,35 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 
-// Раздаём статику (открывает сайт с 4000)
+// 📌 Раздаём статику (чтобы сайт загружался)
 app.use(express.static(path.join(__dirname, "public")));
 
-// Главная страница
+// 📌 Главная страница
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname,  "public", "inv.html"));
+    res.sendFile(path.join(__dirname, "public", "inv.html"));
 });
 
-// Файл для хранения гостей
+// 📌 Файл для хранения гостей
 const DATA_FILE = path.join(__dirname, "data.json");
 
-// Функция чтения гостей
+// 📌 Функция чтения гостей
 const readData = () => {
     if (!fs.existsSync(DATA_FILE)) return [];
-    return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
+    try {
+        return JSON.parse(fs.readFileSync(DATA_FILE, "utf-8"));
+    } catch (error) {
+        console.error("Ошибка чтения data.json:", error);
+        return [];
+    }
 };
 
-// Функция записи гостей
+// 📌 Функция записи гостей
 const writeData = (data) => {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+    try {
+        fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2));
+    } catch (error) {
+        console.error("Ошибка записи data.json:", error);
+    }
 };
 
 // 📌 Получить список гостей
@@ -51,9 +60,7 @@ app.post("/submit", (req, res) => {
     res.json({ message: "Қатысу сәтті расталды!" });
 });
 
-// Запускаем сервер
-console.log("PORT из process.env:", process.env.PORT);
-
+// 📌 Запускаем сервер
 app.listen(PORT, () => {
-    console.log(`Сервер запущен на порту ${PORT}`);
+    console.log(`✅ Сервер запущен на порту ${PORT}`);
 });
