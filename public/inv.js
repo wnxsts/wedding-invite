@@ -83,38 +83,26 @@ document.addEventListener("DOMContentLoaded", () => {
     // 📝 Форма RSVP
     const form = document.getElementById("rsvp-form");
 
-    if (form) {
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault(); // Остановка стандартной отправки формы
 
-            const name = document.getElementById("guest-name").value.trim();
-            const attending = document.querySelector('input[name="attendance"]:checked')?.value;
+        const name = document.getElementById("name").value;
+        const attending = document.querySelector('input[name="attending"]:checked')?.value;
 
-            if (!name || !attending) {
-                alert("Барлық өрістерді толтырыңыз.");
-                return;
-            }
+        if (!name || !attending) {
+            alert("Барлық өрістерді толтырыңыз.");
+            return;
+        }
 
-            try {
-                const response = await fetch("http://localhost:4000/submit", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ name, attending })
-                });
-
-                if (!response.ok) {
-                    throw new Error("Ошибка отправки данных.");
-                }
-
-                const data = await response.json();
-                alert(data.message);
-                form.reset(); // Очистка формы после успешной отправки
-
-            } catch (error) {
-                console.error("Қате:", error);
-            }
+        const response = await fetch("https://your-service.onrender.com/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, attending })
         });
-    }
+
+        const result = await response.json();
+        alert(result.message);
+    });
 });
 document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
