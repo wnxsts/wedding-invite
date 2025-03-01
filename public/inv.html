@@ -28,9 +28,10 @@
             <h3 class="names">Сайран & Жанар</h3>
             <button class="music-button">🎵</button>
         </div>
-        <audio id="background-music" autoplay loop>
-            <source src="msc.ogg" type="audio/ogg">
+        <audio id="background-music" autoplay loop muted>
             <source src="msc.mp3" type="audio/mpeg">
+            <source src="msc.ogg" type="audio/ogg">
+            Ваш браузер не поддерживает аудио.
         </audio>
     </section>
     
@@ -176,7 +177,7 @@
         <h2>Тойға қатысуыңызды растаңыз</h2>
         <form id="rsvp-form">
             <label for="guest-name">Аты-жөндеріңіз:</label>
-            <input type="text" id="guest-name" name="guest-name" required>
+            <input type="text" id="guest-name" name="name" required>
 
     
     
