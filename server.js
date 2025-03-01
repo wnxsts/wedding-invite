@@ -6,6 +6,7 @@ const path = require("path");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
+app.use(cors());
 
 // Проверяем, есть ли DATABASE_URL
 if (!process.env.DATABASE_URL) {
