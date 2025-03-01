@@ -968,3 +968,6 @@ button:hover {
         min-width: 70px;
     }
 }
+audio {
+    display: none; /* Полностью скрывает аудиоплеер */
+}
