@@ -1,13 +1,13 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const Database = require("better-sqlite3");
+const sqlite3 = require("sqlite3").verbose();
+const db = new sqlite3.Database("data.db");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Подключаем базу SQLite (файл data.db)
-const db = new Database("data.db", { verbose: console.log });
+
 
 // Создаём таблицу гостей, если её нет
 db.prepare(`
