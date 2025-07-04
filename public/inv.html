@@ -1,223 +1,182 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Үйлeну той</title>
-    <link rel="stylesheet" href="inv.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт-приглашение</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Herr+Von+Muellerhoff&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 
-
+  <link rel="stylesheet" href="inv.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1 class="wedding-date">26.04.2025</h1>
-           
-            <h2 class="title">Үйлeну той</h2>
-            <h3 class="names">Сайран & Жанар</h3>
-            <button class="music-button">🎵</button>
-        </div>
-        
-        <audio id="background-music" autoplay loop>
-            <source src="msc.mp3" type="audio/mpeg">
-            <source src="msc.ogg" type="audio/ogg">
-        </audio>
-        
-    </section>
+  <div class="wrapper">
     
-    <!-- Countdown Section -->
-    <section class="countdown">
-        <h2 class="section-title">Тойға дейін:</h2>
-        <div id="timer">
-            <div><span id="days">00</span><br>Күн</div>
-            <div><span id="hours">00</span><br>Сағат</div>
-            <div><span id="minutes">00</span><br>Минут</div>
-            <div><span id="seconds">00</span><br>Секунд</div>
-        </div>
-    </section>
-    <section class="photo-section">
-        <img src="images/fon5.jpg" alt="Естелік фото">
-    </section>
-    
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="welcome-content">
-            <h2 class="section-title">Құрметті қонақтар!</h2>
-            <p class="welcome-quote">“Некені жариялаңдар, оны мешітте қиыңдар және дабыл қағыңдар.”</p>
-            <p class="welcome-text">Сіздерді балаларымыздың үйлену тойына арналған ақ дастарханымыздың қонағы болуға шақырамыз!</p>
-        </div>
-    </section>
-    
+   
+        <div class="initials" >Г<span class="dot">♥</span>М</div>
+        <div class="names">Ганибет ♥ Мадина</div>
+        <div class="date">23 АВГУСТА 2025 ГОДА</div>
 
-    <!-- Event Schedule Section -->
-    <section class="schedule">
-        <h2 class="section-title">Тойдың бағдарламасы</h2>
-        <div class="timeline">
-            <div class="event" data-direction="left">
-                <img src="images/fon9.jpg" alt="Сбор гостей">
-                <div class="event-text">
-                    <h3>13:00</h3>
-                    <p>Қонақтардың жиналуы ( Фуршет)</p>
-                </div>
-            </div>
-            <div class="event" data-direction="right">
-                <img src="images/fon4.jpg" alt="Неке қию рәсімі">
-                <div class="event-text">
-                    <h3>13:30</h3>
-                    <p>Құда қарсы алу (Мейрамхана залы)    </p>
-                </div>
-            </div>
-            <div class="event" data-direction="left">
-                <img src="images/fon2.jpg" alt="Фотосессия">
-                <div class="event-text">
-                    <h3>14:00</h3>
-                    <p>Ресми неке қию рәсімі (Мейрамхана залы)               </p>
-                </div>
-            </div>
-            <div class="event" data-direction="right">
-                <img src="images/fon6.jpg" alt="Құда қарсы алу">
-                <div class="event-text">
-                    <h3>14:30</h3>
-                    <p>Той                 (Мейрамхана залы)               </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="photo-section">
-        <img src="images/fon10.jpg" alt="Фото 2">
-    </section>
-    <section class="calendar">
-        <div class="calendar-wrapper">
-            <div class="calendar-header">
-                <h3>Сәуір 2025</h3>
-            </div>
-            <div class="calendar-grid">
-                <!-- Дни недели -->
-                <div class="day">Дс</div>
-                <div class="day">Сс</div>
-                <div class="day">Ср</div>
-                <div class="day">Бс</div>
-                <div class="day">Жм</div>
-                <div class="day">Сб</div>
-                <div class="day">Жс</div>
-    
-                <!-- Пустые ячейки до 1 апреля (начинается во вторник) -->
-                <div class="empty"></div>
-                
-                <!-- Дни месяца -->
-                <div class="date">1</div>
-                <div class="date">2</div>
-                <div class="date">3</div>
-                <div class="date">4</div>
-                <div class="date">5</div>
-                <div class="date">6</div>
-                <div class="date">7</div>
-                <div class="date">8</div>
-                <div class="date">9</div>
-                <div class="date">10</div>
-                <div class="date">11</div>
-                <div class="date">12</div>
-                <div class="date">13</div>
-                <div class="date">14</div>
-                <div class="date">15</div>
-                <div class="date">16</div>
-                <div class="date">17</div>
-                <div class="date">18</div>
-                <div class="date">19</div>
-                <div class="date">20</div>
-                <div class="date">21</div>
-                <div class="date">22</div>
-                <div class="date">23</div>
-                <div class="date">24</div>
-                <div class="date">25</div>
-                <div class="date heart-date">26</div>
-                <div class="date">27</div>
-                <div class="date">28</div>
-                <div class="date">29</div>
-                <div class="date">30</div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="golden-block">
-        <h3 class="time">13:00</h3>
-        <div class="golden-text">
-            <h2>Той иелері:</h2>
-            <p>АТА-АНАСЫ</p>
-            <p>САЯТ - АСЕЛЬ</p>
-        </div>
-    </section>
-    <!DOCTYPE html>
-<html lang="kk">
 
-<body>
-    <section class="photo-section">
-        <img src="images/fon8.jpg" alt="Фото 2">
-    </section>
-    <section class="location">
-        <h2 class="section-title">Мекен -жайымыз:</h2>
-        <p class="address">
-            АСТАНА ҚАЛАСЫ, МҰҒАЛЖАР К-СІ, 15/2<br>
-            "BIBIGUL" МЕЙРАМХАНАСЫ
-        </p>
-        <a href="https://2gis.kz/astana/geo/70000001038182842" class="gis-button">2GIS</a>
-    </section>
-    <section class="rsvp-section">
-        <h2>Тойға қатысуыңызды растаңыз</h2>
-        <form id="rsvp-form">
-            <label for="guest-name">Аты-жөндеріңіз:</label>
-            <input type="text" id="guest-name" name="name" required>
-
-    
-    
-            <label>Тойға келесіздер ме?</label>
-            <div class="radio-group">
-                <label class="radio-label">
-                    <input type="radio" id="yes" name="attendance" value="Келемін" required>
-                    <span class="custom-radio"></span> <span class="radio-text">Иә, келеміз</span>
-                </label>
-    
-                <label class="radio-label">
-                    <input type="radio" id="no" name="attendance" value="Келе алмаймын">
-                    <span class="custom-radio"></span> <span class="radio-text">Өкінішке орай, келе алмаймыз</span>
-                </label>
+        <div class="music-section">
+  <p>включи музыку нашей любви....</p>
+  <button id="musicToggle" class="music-button">
+    ▶
+  </button>
+  <audio id="loveMusic" src="bbb.mp3"></audio>
+</div>
+        <section>
+       <div class="invite-section">
+          <div class="greeting">Дорогие друзья!</div>
+          <p class="fff">Один день в этом году будет для нас особенным, и мы хотим разделить его с вами.</p>
+          <p class="fff1">Ждём вас на празднике по случаю нашей свадьбы</p>
+          <div class="calendar">
+            <div class="month">АВГУСТ, 2025</div>
+            <div class="days">
+              <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+              <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+              <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+              <span>21</span><span>22</span><div class="heart-day">
+  <svg viewBox="0 0 24 24" class="heart-shape">
+    <path fill="white" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 
+    5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+    4.5 2.09C13.09 3.81 14.76 3 16.5 
+    3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+    6.86-8.55 11.54L12 21.35z"/>
+  </svg>
+  <span class="heart-number">23</span><span>24</span><span>25</span>
+</div><span>26</span><span>27</span>
+              <span>28</span><span>29</span><span>30</span><span>31</span>
             </div>
-    
-            <button type="submit">Жіберу</button>
-        </form>
-    </section>
-    <section class="photo-section">
-        <img src="images/fon11.jpg" alt="Фото 2">
-    </section>
-    
-    <section class="telegram">
-        <h2>ҚҰРМЕТТІ ҚОНАҚТАР, ТОЙ ФОТОЛАРЫН ТӨМЕНДЕГІ ТЕЛЕГРАМ КАНАЛДАН КӨРЕ АЛАСЫЗДАР!</h2>
-        <a href="https://t.me/+m57IfIrKDOo1NzNi" class="telegram-button">
-            <img src="images/tg.png" alt="Telegram">
-            ТЕЛЕГРАМ
-        </a>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Шақыруды жасаған  
-            <a href="https://www.instagram.com/wnxsts" target="_blank" style="color: #d6869a; text-decoration: none;">
-                @wnxsts
-            </a>
-        </p>
-    </footer>
-    
-    <script src="inv.js"></script>
+</section>
+
+<div class="location-section">
+  <div class="location-title">Локация<div style="width: 200px; height: 1px; background-color: black; margin: 1px auto;"></div></div>
+
+ <div class="banquet-info">
+  <h3>ПРАЗДНИЧНЫЙ БАНКЕТ</h3>
+  <p>г. Астана, ул. Енлик-Кебек 1/6<br>
+     Koktal resort<br>
+     Начало в 14:00</p>
+</div>
+<a href="https://2gis.kz/astana/firm/70000001082730614/tab/reviews?m=71.349985%2C51.169342%2F16.56" > <img src="images/foto1.jpg" alt="Карта места" class="map" ></a>
+   
+  </div>
+    </div>
+
+
+<div class="dress-code">
+  <div class="dress-title">Дресс-код <div style="width: 200px; height: 1px; background-color: black; margin: 1px auto;"></div></div>
+  <p class="dress-text">
+    Пожалуйста, приходите в красивой одежде,<br>
+    которая соответствует торжественному настроению.
+  </p>
+  <p class="dress-text">
+    Мы будем рады, если вы поддержите<br>
+    цветовую палитру нашей свадьбы:</br>
+    пастелные цвета
+  </p>
+  <div class="color-palette">
+    <div class="color-box" style="background-color: #FFF44F ;"></div>
+    <div class="color-box" style="background-color: #AEC6CF;"></div>
+    <div class="color-box" style="background-color:  #808000;"></div>
+  
+  </div>
+</div>
+<div class="dddd"> 
+ <div class=" svadba">До свадьбы осталось<div style="width: 350px; height: 1px; background-color: black; margin: 1px auto;"></div></div>
+  <div class="countdown" id="countdown">
+    <div class="unit">
+      <span id="months">0</span>
+      <span>МЕСЯЦА</span>
+    </div>
+    <div class="unit">
+      <span id="days">0</span>
+      <span>ДНЕЙ</span>
+    </div>
+    <div class="unit">
+      <span id="hours">0</span>
+      <span>ЧАСОВ</span>
+    </div>
+    <div class="unit">
+      <span id="minutes">0</span>
+      <span>МИНУТ</span>
+    </div>
+  </div>
+  </div>
+   <script>
+    const weddingDate = new Date("2025-08-23T00:14:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      const totalMinutes = Math.floor(diff / 60000);
+      const totalHours = Math.floor(diff / (1000 * 60 * 60));
+      const totalDays = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const totalMonths = Math.floor(totalDays / 30);
+
+      const months = totalMonths;
+      const days = totalDays % 30;
+      const hours = totalHours % 24;
+      const minutes = totalMinutes % 60;
+
+      document.getElementById("months").textContent = months;
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // update every minute
+  </script>
+<div class="toiy-ieleri-section">
+  <h2>Той иелери</h2>
+  <div class="names">Махамбет & Айдархан–Жибек</div>
+</div>
+<div class="final-message">
+  <p class="memory">
+    Вместе мы создадим незабываемые воспоминания,<br>
+    полные любви и счастья. Не упустите возможность<br>
+    стать частью нашей истории!
+  </p>
+  
+</div>
+
+  <div class="goodbye-section">
+  <div class="goodbye-overlay">
+    <p class="goodbye">
+    До встречи на нашем празднике любви! ❤️
+  </p>
+    <h2 class="names-final">
+      ГАНИБЕТ <span class="and-word"> and</span>        <br>МАДИНА
+    </h2>
+  </div>
+</div>
+
+
+<script>
+  const audio = document.getElementById("loveMusic");
+  const btn = document.getElementById("musicToggle");
+
+  let isPlaying = false;
+
+  btn.addEventListener("click", () => {
+    if (isPlaying) {
+      audio.pause();
+      btn.textContent = "▶";
+    } else {
+      audio.play();
+      btn.textContent ="❚❚" ;
+    }
+    isPlaying = !isPlaying;
+  });
+</script>
+
+
+</div>  
 </body>
 </html>

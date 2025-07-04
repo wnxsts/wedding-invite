@@ -1,973 +1,424 @@
-/* ====== ОБЩИЕ НАСТРОЙКИ ====== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Georgia', serif;
-    background: #fff;
-    color: #333;
-}
-.welcome {
-    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
-    padding: 50px 20px;
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 40px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background-color: #f6f2ee;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.welcome h2 {
-    font-size: 2.5rem;
-    color: #d19a00;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-.welcome-quote {
-    font-size: 1.4rem;
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-    border-left: 4px solid #ffcc00;
-    border-right: 4px solid #ffcc00;
-    padding: 10px 20px;
-    display: inline-block;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.welcome-text {
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 1.6;
-    margin-top: 15px;
-}
-/* ====== HERO SECTION ====== */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: url('images/hands.jpg') no-repeat center center/cover;
-    opacity: 1;
-    z-index: -1;
-}
-
-/* Полупрозрачный слой */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-/* Контент */
-.countdown {
-    padding: 50px 20px;
-    text-align: center;
-    background: linear-gradient(to bottom, #f9f9f9, #ffffff);
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    max-width: 900px;
-}
-
-.countdown h2 {
-    font-size: 2rem;
-    color: #222;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-
-.invitation-container {
-    text-align: center; /* Центрирует текст */
-    position: absolute;
-    top: 35%; /* Настроить под нужное расположение */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; /* Чтобы текст оставался в центре */
-    z-index: 2;
-}
-/* ====== ДАТА СВАДЬБЫ ====== */
-/* Дата */
-/* ====== ДАТА СВАДЬБЫ ====== */
-.wedding-date {
-    font-size: 5rem;
-    color: #ffffff;
-    opacity: 0.5;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 35%; /* Поднято выше */
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    z-index: 2;
-}
-
-/* Заголовок "ҮЙЛЕНУ ТОЙ" */
 .title {
-    font-size: 3rem;
-    color: #d9d9d9;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: absolute;
-    top: -140%; /* Опущено вниз */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    white-space: nowrap; 
+  font-size: 28px;
+  color: #7a7354;
+  margin-bottom: 40px;
 }
 
-/* Имена */
+.phone {
+  background-color: black;
+  border-radius: 48px;
+  width: 320px;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.screen {
+  background-color: white;
+  width: 280px;
+  height: 600px;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.initials {
+  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-weight: 500;
+  color: black;
+}
+
+.dot {
+  font-size: 12px;
+  vertical-align: middle;
+  margin: 0 8px;
+  color: black;
+}
+@font-face {
+  font-family: 'Imperial';
+  src: url('../fonts/Imperial-Regular.ttf') format('truetype');
+}
+
 .names {
-    font-size: 8rem;
-    color: #e6b87f;
-    font-style: italic;
-    font-weight: bold;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 125%; /* Опускаем вниз */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    font-family: "Great Vibes", "Dancing Script";
-    white-space: nowrap; /* Запрещает перенос на новую строку */
+  font-family: 'Imperial', cursive;
+  font-size: 36px;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
 }
 
-/* ====== МУЗЫКАЛЬНАЯ КНОПКА ====== */
-.music-button {
-    width: 80px;
-    height: 80px;
-    background: #686561;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, background 0.3s ease;
-    top: -25%; /* Опускаем вниз */
-    opacity: 0.5;
-    position: relative; /* Меняем absolute на relative */
-    margin-top: 20px; /* Даем отступ от имен */
-    margin-left: auto; /* Выравнивание по центру */
-    margin-right: auto;
-}
+/* 
+.names {
+font-family: 'Marck Script', cursive;
+ 
+} */
 
-
-@media (max-width: 768px) {
-    .music-button {
-        width: 60px;
-        height: 60px;
-        margin-top: 15px; /* Уменьшаем отступ на мобильных */
-    }
-}
-
-@media (max-width: 480px) {
-    .music-button {
-        width: 50px;
-        height: 50px;
-        margin-top: 10px;
-    }
-}
-
-
-.music-button::after {
-    content: "▶";
-    font-size: 2rem;
-    color: #fff;
-}
-
-.music-button:hover {
-    transform: translateX(-50%) scale(1.1);
-    background: #101110;
-}
-
-/* ====== ОБРАТНЫЙ ОТСЧЁТ (Countdown) ====== */
-.countdown {
-    padding: 50px 20px;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-#timer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;  /* Позволяет перенос строк */
-    gap: 10px; /* Добавляем отступ между блоками */
-    padding: 10px;
-}
-
-/* Оформление карточек времени */
-#timer div {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: #ffffff;
-    color: #333;
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 100px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-/* Эффект наведения */
-#timer div:hover {
-    transform: scale(1.05);
-    background: #ffcc00;
-    color: #fff;
-}
-/* ====== РАСПИСАНИЕ (Schedule) ====== */
-.schedule {
-    padding: 40px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
-    text-align: center;
-    border-radius: 10px;
-    margin-top: 40px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.schedule h2 {
-    font-size: 2rem;
-    color: #222;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-/* ====== Уменьшаем карточки событий ====== */
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-}
-
-.event {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    width: 85%;
-    max-width: 600px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.event:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* ====== Уменьшаем картинки событий ====== */
-.event img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    margin-right: 12px;
-    border-radius: 8px;
-    border: 2px solid #FFD700;
-}
-
-/* ====== Текст событий ====== */
-.event-text {
-    text-align: left;
-    flex-grow: 1;
-}
-
-.event-text h3 {
-    font-size: 2.0rem;
-    color: #444;
-    font-weight: bold;
-    margin-bottom: 3px;
-}
-
-.event-text p {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.4;
-}
-
-
-/* ====== КАЛЕНДАРЬ ====== */
-.calendar {
-    padding: 40px 20px;
-    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
-    text-align: center;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 400px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    border: 3px solid #FFD700; /* Золотая рамка */
-}
-
-.calendar-header h3 {
-    font-size: 1.8rem;
-    color: #222;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-}
-
-/* ====== Сетка календаря ====== */
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    font-family: 'Arial', sans-serif;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-/* Заголовки дней недели */
-.day {
-    font-weight: bold;
-    color: #555;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 5px;
-    border-bottom: 2px solid #FFD700;
-    text-align: center;
-}
-
-/* Стиль чисел календаря */
 .date {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    background: #fff;
-    color: #333;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background 0.3s, color 0.3s;
-    text-align: center;
+  font-size: 14px;
+  color: #444;
+  text-transform: uppercase;
+}
+.invite-section {
+  background: black;
+   background-image: url('images/fon1.jpg');
+  background-size: cover;
+  border-radius: 0;
+  padding: 30px 20px;
+  max-width: 320px;
+  margin-top: 40px;
+  text-align: center;
+  position: relative;
 }
 
-/* Эффект наведения */
-.date:hover {
-    transform: scale(1.1);
-    background: #FFD700;
-    color: #fff;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.greeting {
+  font-family: 'Imperial', cursive;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #f6f2ee;
 }
 
-/* ====== Выделение 26 числа сердечком ====== */
-.heart-date {
-    position: relative;
-    background: #ff6b6b;
-    color: #fff;
-    font-weight: bold;
-    box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
-    border-radius: 50%;
+.invite-section p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #f6f2ee;
+   
 }
 
-/* Добавление сердечка */
-.heart-date::after {
-    content: "❤";
-    font-size: 1.2rem;
-    position: absolute;
-    top: -10px;
-    right: -5px;
-    color: #ff4d4d;
-}
-/* ====== Оформление блока с золотым узором ====== */
-.golden-block {
-    background: url('images/fon.jpg') no-repeat center center/cover;
-    padding: 80px 30px;
-    text-align: center; /* Выравниваем текст по центру */
-    border-radius: 15px;
-    max-width: 800px;
-    min-height: 500px;
-    margin: 50px auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    position: relative;
+.calendar {
+  margin-top: 30px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-
-
-/* Время (например, 18:30) */
-.time {
-    font-size: 2rem;
-    color: #666;
-    font-weight: bold;
+.month {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #f6f2ee;
+  text-align: right;
 }
 
-/* Контейнер для текста */
-.golden-text {
-    font-family: 'Georgia', serif;
-    font-size: 2rem;
-    color: #d19a00;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-top: 20px;
-    text-align: center; /* Дополнительное центрирование */
-}
-/* Добавляем золотой узор */
-
-.golden-block::before,
-.golden-block::after {
-    content: "";
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: url('gold-pattern.png') no-repeat center center/cover;
-    top: 10px;
+.days {
+  color: #f6f2ee;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  font-size: 18px;
+  text-align: right;
 }
 
-.golden-block::before {
-    left: 10px;
+.days span {
+  padding: 5px;
 }
 
-.golden-block::after {
-    right: 10px;
+.heart-day {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
 }
 
-.footer {
-    padding: 30px;
-    text-align: center;
-    background: #333;
-    color: #fff;
-}
-.rsvp-section {
-    background: #ffdd57; /* Желтый фон */
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    margin: 50px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+.heart-shape {
+  width: 100%;
+  height: 100%;
 }
 
-h2 {
-    color: #aa6c00;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.heart-number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    font-weight: bold;
-    margin: 10px 0 5px;
-    display: block;
-    font-size: 1.1rem;
-}
-
-input[type="text"],
-input[type="number"] {
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ffcc00;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-/* Радио-кнопки + текст в одной строке */
-.radio-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-/* Стилизация радио-кнопок */
-.radio-label {
-    display: flex;
-    align-items: center;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-/* Скрываем стандартные радио-кнопки */
-.radio-label input[type="radio"] {
-    display: none;
-}
-
-/* Кастомные радио-кнопки */
-.custom-radio {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #aa6c00;
-    border-radius: 50%;
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
-    cursor: pointer;
-}
-
-/* Эффект выбора радио-кнопки */
-.radio-label input[type="radio"]:checked + .custom-radio {
-    background-color: #aa6c00;
-    border: 2px solid #774c00;
-}
-
-.radio-label input[type="radio"]:checked + .custom-radio::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Кнопка */
-button {
-    background: #b5d6f8;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 85%;
-    font-size: 1.1rem;
-}
-
-button:hover {
-    background: #6b5707;
-}
-
-.location, .telegram {
-    text-align: center;
-    padding: 20px;
-    background: #fff3cd; /* Светло-желтый фон */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
-    max-width: 90%;
-}
-
-.section-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #d4a017;
-    margin-bottom: 10px;
-}
-
-.address {
-    font-size: 1.2rem;
-    color: #444;
-    margin-bottom: 15px;
-}
-
-/* Кнопка 2GIS */
-.gis-button {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background: #d4a017;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background 0.3s ease;
-}
-
-.gis-button:hover {
-    background: #b8860b;
-}
-
-/* Telegram секция */
-.telegram h2 {
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* Кнопка Телеграм */
-.telegram-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    background: #0088cc;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background 0.3s ease;
-    max-width: 200px;
-    margin: 0 auto;
-}
-
-.telegram-button img {
-    width: 50px;
-    height: 50px;
-}
-
-.telegram-button:hover {
-    background: #006699;
-}
-
-
-/* Адаптация под мобильные устройства */
-@media (max-width: 480px) {
-    .rsvp-section {
-        width: 95%;
-        padding: 15px;
-    }
-    
-    input {
-        width: 90%;
-    }
-    
-    button {
-        width: 90%;
-    }
-}
-
-/* 📌 АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
-@media (max-width: 768px) {
+.location-section {
   
-
-    .music-button {
-        width: 60px;
-        height: 60px;
-        bottom: 4%;
-    }
-
-    .event {
-        flex-direction: column;
-        text-align: center;
-        padding: 12px;
-        width: 95%;
-    }
-
-    .event img {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 8px;
-    }
-
-    .event-text h3 {
-        font-size: 1.1rem;
-    }
-
-    .event-text p {
-        font-size: 0.9rem;
-    }
+  color: black;
+  text-align: center;
+  padding: 40px 20px;
 }
 
-    .calendar-grid {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 5px;
-    }
-
-    .date {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    
-
-    @media (max-width: 768px) {
-        .buttons-section {
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-    
-        .telegram-button, .gis-button {
-            width: 90%;
-            font-size: 1rem;
-            padding: 10px;
-        }
-    
-        .telegram-button img, .gis-button img {
-            width: 25px;
-            height: 25px;
-        }
-    }
-
-/* 📌 АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ (до 480px) */
-@media (max-width: 480px) {
-
-
-    .schedule h2 {
-        font-size: 1.8rem;
-    }
-
-    .event {
-        padding: 10px;
-    }
-
-    .event img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .event-text h3 {
-        font-size: 1rem;
-    }
-
-    .event-text p {
-        font-size: 0.85rem;
-    }
-
-    .calendar-grid {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 3px;
-    }
-
-    .date {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
-    }
-}
-/* 📌 Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .address {
-        font-size: 1rem;
-    }
-
-    .gis-button, .telegram-button {
-        font-size: 1rem;
-        padding: 10px 15px;
-    }
-
-    .telegram-button img {
-        width: 20px;
-        height: 20px;
-    }
-
-    .telegram h2 {
-        font-size: 1.4rem;
-    }
+.location-title {
+  font-family: 'Imperial', cursive;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.3rem;
-    }
-
-    .address {
-        font-size: 0.9rem;
-    }
-
-    .gis-button, .telegram-button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-
-    .telegram h2 {
-        font-size: 1.2rem;
-    }
-}
-.photo-section {
-    text-align: center;
-    margin: 20px auto;
-    padding: 15px;
+.map {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid black;
+  border-radius: 4px;
 }
 
-/* Стили для фото */
-.photo-section img {
-    width: 100%;
-    max-width: 500px; /* Максимальная ширина фото */
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin: 20px 0 10px;
+}
+.banquet-info {
+  text-align: left; /* Выравнивание по левому краю */
+  padding-left: 20px; /* Чуть отступ от левого края */
+}
+.dress-code {
+  text-align: center;
+  padding: 40px 20px;
+  
 }
 
-/* 📌 Адаптация для мобильных устройств */
-@media (max-width: 768px) {
-    .photo-section img {
-        max-width: 90%;
-    }
-}
-/* 📌 ОБНОВЛЕННАЯ АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
-@media (max-width: 768px) {
-    
-
-    .music-button {
-        width: 60px;
-        height: 60px;
-        bottom: 4%;
-    }
-
-    .event {
-        flex-direction: column;
-        text-align: center;
-        padding: 12px;
-        width: 95%;
-    }
-
-    .event img {
-        width: 50px;
-        height: 50px;
-        margin-bottom: 8px;
-    }
-
-    .event-text h3 {
-        font-size: 1.1rem;
-    }
-
-    .event-text p {
-        font-size: 0.9rem;
-    }
-
-    .telegram-button, .gis-button {
-        width: 90%;
-        font-size: 1rem;
-        padding: 10px;
-    }
+.dress-title {
+  font-family: 'Imperial', cursive;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-/* 📌 Полная адаптация для телефонов (до 480px) */
-@media (max-width: 480px) {
-
-
-    .music-button {
-        width: 50px;
-        height: 50px;
-        bottom: 6%;
-    }
-
-    .schedule h2 {
-        font-size: 1.8rem;
-    }
-
-    .event {
-        padding: 10px;
-    }
-
-    .event img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .event-text h3 {
-        font-size: 1rem;
-    }
-
-    .event-text p {
-        font-size: 0.85rem;
-    }
-
-    .telegram-button, .gis-button {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-
-    .calendar-grid {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 3px;
-    }
-
-    .date {
-        width: 35px;
-        height: 35px;
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .wedding-date {
-        font-size: 4rem;
-    }
-
-    .names {
-        font-size: 5rem;  /* Уменьшаем размер имен на мобильных */
-    }
+.dress-title .line {
+  display: inline-block;
+  width: 150px;
+  height: 1px;
+  background: black;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 2rem;
-    }
-
-    .wedding-date {
-        font-size: 3rem;
-       
-    }
-
-    .names {
-        font-size: 3.5rem; /* Еще меньше для телефонов */
-    }
-}
-@media (max-width: 768px) {
-    #timer {
-        flex-direction: row;
-        justify-content: center;
-        gap: 5px; /* Уменьшаем отступы */
-    }
-
-    #timer div {
-        font-size: 1.4rem;
-        padding: 10px 15px;
-        min-width: 80px;
-    }
+.dress-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+  text-align: right;
 }
 
-@media (max-width: 480px) {
-    #timer {
-        flex-direction: column; /* Размещаем элементы друг под другом */
-        align-items: center;
+.color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.color-box {
+  width: 100px;
+  height: 20px;
+  border-radius: 1px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}    
+
+.dddd{
+  background-image:url('images/foto5.jpg') ;
+   background-size: cover;         /* Растягивает на весь блок */
+  background-position: center;    /* Центрирует */
+  background-repeat: no-repeat;   /* Не повторяется */
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.svadba {
+      font-family: 'Imperial', cursive;
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #f6f2ee;
     }
 
-    #timer div {
-        font-size: 1.2rem;
-        padding: 8px 12px;
-        min-width: 70px;
+    .countdown {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
     }
+
+    .unit {
+      background-color: rgba(255, 255, 255, 0.85);
+      opacity: 50%;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: black;
+    }
+
+    .unit span:first-child {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .unit span:last-child {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+
+.toiy-ieleri-section {
+  text-align: center;
+  margin: 60px 20px;
+  padding: 40px 20px;
+  background-color: #f9f6f2;
+  border-radius: 36px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
-audio {
-    display: none; /* Полностью скрывает аудиоплеер */
+
+.toiy-ieleri-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.toiy-ieleri-section .names {
+  font-family: 'Imperial', cursive;
+  font-size: 28px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.final-message {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #2e2e2e;
+}
+
+.memory {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.goodbye {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Imperial', cursive;
+}
+.goodbye-section {
+  background-image: url('images/foto6.jpg'); /* замените на ваш путь */
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0px;
+  overflow: hidden;
+}
+
+.goodbye-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.see-you {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 42px;
+  margin-top: 50px;
+}
+
+.names-final {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  margin-top: 200px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.and-word {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 35px;
+  text-transform: none;
+  margin: 0 8px;
+}
+.ded{
+  font-family:'Imperial', cursive ;
+}
+.music-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.music-section p {
+  font-size: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 20px;
+}
+
+.music-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  opacity: 50%;
+}
+.fff{
+  text-align: left;
+}
+.fff1{
+  text-align: left;
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 22px;
+  }
+  .phone {
+    width: 280px;
+    height: 560px;
+  }
+  .screen {
+    width: 250px;
+    height: 520px;
+  }
+  .initials {
+    font-size: 110px;
+  }
+  .names {
+    font-size: 20px;
+  }
+  .date {
+    font-size: 18px;
+  }
 }
