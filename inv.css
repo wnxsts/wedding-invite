@@ -380,13 +380,7 @@ h3 {
   font-size: 20px;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 20px;
-   position: relative;
-  height: 100vh; /* займет весь экран */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* чтобы текст был над кнопкой */
-  text-align: center;
+
 }
 
 .music-button {
@@ -402,11 +396,7 @@ h3 {
   opacity: 50%;
   text-align: center;
   justify-content: center;
-   background-color: transparent;
-  border: none;
-  font-size: 80px; /* размер иконки */
-  cursor: pointer;
-  color: #555;
+  text-align: center;
 }
 .fff{
   text-align: left;
