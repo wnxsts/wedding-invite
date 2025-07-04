@@ -393,6 +393,7 @@ h3 {
   cursor: pointer;
   transition: 0.3s ease;
   opacity: 50%;
+  text-align: center;
 }
 .fff{
   text-align: left;
