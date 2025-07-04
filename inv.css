@@ -59,7 +59,7 @@ body {
 }
 @font-face {
   font-family: 'Imperial';
-  src: url('../fonts/Imperial-Regular.ttf') format('truetype');
+  src: url('fonts/Imperial-Regular.ttf') format('truetype');
 }
 
 .names {
