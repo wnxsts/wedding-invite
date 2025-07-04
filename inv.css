@@ -84,7 +84,7 @@ font-family: 'Marck Script', cursive;
 }
 .invite-section {
   background: black;
-   background-image: url('images/fon11.jpg');
+   background-image: url('images/fon111.jpg');
   background-size: cover;
   border-radius: 0;
   padding: 30px 20px;
@@ -400,6 +400,23 @@ h3 {
 .fff1{
   text-align: left;
 }
+
+.credits {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 40px;
+}
+
+.credits a {
+  color: #aa6c9d;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 500px) {
   .title {
     font-size: 22px;
