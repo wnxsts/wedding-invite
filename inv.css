@@ -380,7 +380,6 @@ h3 {
   font-size: 20px;
   font-family: 'Cormorant Garamond', serif;
   margin-bottom: 20px;
-
 }
 
 .music-button {
@@ -394,9 +393,6 @@ h3 {
   cursor: pointer;
   transition: 0.3s ease;
   opacity: 50%;
-  text-align: center;
-  justify-content: center;
-  text-align: center;
 }
 .fff{
   text-align: left;
